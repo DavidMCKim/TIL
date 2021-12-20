@@ -1,19 +1,20 @@
+## functions
 class Node():
     def __init__(self):
         self.data = None
         self.link = None
 
-def printNodes(start):
+def printNode(start):
     current = start
     if current == None:
         return
     print(current.data,end=' ')
     while current.link != None:
         current = current.link
-        print(current.data, end=' ')
+        print(current.data,end=' ')
     print()
 
-def insertNode(findData, insertData):
+def insertNode(findData,insertData):
     global memory, head, current, pre
 
     if head.data == findData:
@@ -44,6 +45,8 @@ memory = []
 head, current, pre = None, None, None
 dataArray = ['다현','정연','쯔위','사나','지효']
 
+## main
+
 if __name__ == '__main__':
     node = Node()
     node.data = dataArray[0]
@@ -57,13 +60,4 @@ if __name__ == '__main__':
         pre.link = node
         memory.append(node)
 
-    printNodes(head)
-
-    insertNode('다현','화사')
-    printNodes(head)
-
-    insertNode('사나','솔라')
-    printNodes(head)
-
-    insertNode('재남','문별')
-    printNodes(head)
+    printNode(head)
