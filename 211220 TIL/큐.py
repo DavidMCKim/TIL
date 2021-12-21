@@ -51,4 +51,25 @@ select = -1
 ## main
 if __name__ == '__main__':
     while select != 5:
-        pass
+        select = int(input('숫자를 입력해주세요(1:삽입, 2:추출, 3:위치확인, 4:초기화, 5:나가기) : '))
+
+        if select == 1:
+            data = input('삽입할 데이터를 입력해주세요. : ')
+            enQueue(data)
+
+        elif select == 2:
+            pass
+
+        elif select == 3 :
+            pass
+
+        elif select == 4:
+            pass
+
+        elif select == 5:
+            print(queue)
+            print('종료합니다')
+            break
+
+        else:
+            print('잘못된 입력입니다.\n1~5를 입력해주세요.')
