@@ -6,8 +6,10 @@ while n != -1:
     for _ in range(1,n):
         if n % _ == 0:
             yaksu.append(_)
+
         else:
             pass
+    print(yaksu)
     if n == sum(yaksu):
         for _ in yaksu:
             if _ == 1:
@@ -17,3 +19,5 @@ while n != -1:
         print(f'{n} = {result}')
     else:
         print(f'{n} is NOT perfect.')
+
+## 숫자형으로 풀어보기
