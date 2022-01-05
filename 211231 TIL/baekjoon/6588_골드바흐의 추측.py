@@ -34,20 +34,6 @@ while True:
             print(f'{n} = {temp[0][0]} + {temp[0][1]}')
         else:
             print("Goldbach's conjecture is wrong.")
-        # if len(temp) >= 2:
-        #     for _ in temp:
-        #         diff.append(temp[1] - temp[2])
-        #     print()
-        # elif len(temp) == 0:
-        #     print("Goldbach's conjecture is wrong.")
-
-
-
-
-        # if len(sosu) != 1:
-        #     print(f'{n} = {sosu}')
-        # else:
-        #     print("Goldbach's conjecture is wrong.")
 
 
 
