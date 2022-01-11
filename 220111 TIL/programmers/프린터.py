@@ -10,28 +10,3 @@ def solution(priorities, location):
             answer += 1
             if J[0] == location:
                 return answer
-
-
-
-
-
-
-
-
-    return answer
-
-priorities = [2, 1, 3, 2]
-location = 2
-solution(priorities, location)
-#
-# priorities = [1, 1, 9, 1, 1, 1]
-# location = 0
-
-#######################################
-
-# priorities = [2, 1, 3, 2]
-# location = 2
-#
-# temp = priorities
-# temp.sort(reverse=True)
-# print(temp.index(location))
