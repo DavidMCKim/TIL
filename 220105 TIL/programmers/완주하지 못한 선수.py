@@ -1,41 +1,38 @@
 def solution(participant, completion):
     answer = ''
-    for _ in participant:
-        if _ not in completion:
-            completion.pop(_)
-            answer += _
+    player = {}
+    for i in participant:
+        if i in player.keys():
+            player[i] += 1
+        else:
+            player[i] = 1
+
+    for i in completion:
+        if i in player.keys():
+            player[i] -= 1
+
+    for i in player.keys():
+        if player[i] != 0:
+            answer += i
     return answer
 
-answer = ''
+answer = {}
 participant = ["mislav", "stanko", "mislav", "ana"]
 completion = ["stanko", "ana", "mislav"]
 
-answer = {}
+answer = ''
+player = {}
 for i in participant:
-    answer[i] = answer.get(i, 0) +1
-for j in completion:
-    answer[j] -= 1
-for k in answer:
-    if answer[k] :
-        print(k)
+    if i in player.keys():
+        player[i] += 1
+    else:
+        player[i] = 1
 
-# for _ in range(len(participant)):
-#     if participant[_] in completion:
-#         print(_)
-#     if participant[_] not in completion:
-#         answer += participant[_]
-# print(answer)
-#
-# participant.pop(0)
-# print(participant)
-#
-#
-# def solution(participant, completion):
-#     answer = {}
-#     for i in participant:
-#         answer[i] = answer.get(i, 0) +1
-#     for j in completion:
-#         answer[j] -= 1
-#     for k in answer:
-#         if answer[k] :
-#             return k
+for i in completion:
+    if i in player.keys():
+        player[i] -= 1
+
+for i in player.keys():
+    if player[i] != 0:
+        answer += i
+print(answer)
